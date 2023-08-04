@@ -1,0 +1,18 @@
+syntax = "proto3";
+package main;
+
+option go_package = "./proto";
+
+message Point {
+  float PosX = 1;
+  float PosY = 2;
+}
+
+message Trajectory {
+  int32 mass_id = 1;
+  repeated Point points = 2;
+}
+
+message Trajectories {
+  repeated Trajectory trajectories = 1;
+}

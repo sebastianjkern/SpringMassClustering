@@ -1,0 +1,16 @@
+syntax = "proto3";
+package main;
+
+option go_package = "./proto";
+
+message Spring {
+  int32 id = 1;
+  int32 m1 = 2;
+  int32 m2 = 3;
+  float spring_constant = 4;
+  float relaxed_length = 5;
+}
+
+message Springs {
+  repeated Spring springs = 1;
+}
